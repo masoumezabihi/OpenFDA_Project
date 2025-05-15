@@ -1,10 +1,10 @@
-## 📊 Insights from Data Exploration
+##  Insights from Data Exploration
 
 This analysis focuses on a single JSON file from the **OpenFDA Drug Adverse Events** dataset, part of a larger collection of FDA records. The file was selected as a representative sample to examine the structure, completeness, and analytical readiness of the data.
 
 ---
 
-### 🧱 Data Structure
+###  Data Structure
 
 The dataset is delivered in a deeply nested JSON format, containing multiple lists and objects, including:
 
@@ -17,7 +17,7 @@ The data was successfully **flattened** using `pandas.json_normalize()` and then
 
 ---
 
-### 🔍 Column Homogeneity & Constant Fields
+###  Column Homogeneity & Constant Fields
 
 During exploration, several columns were found to contain the **same constant value** across all records. These fields provide no useful variance and can be safely removed or deprioritized in downstream analysis.
 
@@ -35,13 +35,13 @@ Additional constant fields may exist in the `drug` table. A general-purpose func
 
 ---
 
-### 📉 Missing Data and Data Quality
+###  Missing Data and Data Quality
 
 Several fields were found to contain **significant missing values**, often exceeding 50%. This guided early decisions about which fields to retain or drop depending on the goals of future analysis or modeling.
 
 ---
 
-### 🔄 Exploding List-Based Fields
+###  Exploding List-Based Fields
 
 Many fields, such as `drug.openfda.application_number`, `route`, `substance_name`, and `brand_name`, were stored as lists.
 
@@ -51,6 +51,6 @@ Exploding was done **column by column** to handle cases where list lengths were 
 
 ---
 
-### ✅ Conclusion
+###  Conclusion
 
 The exploratory data analysis revealed that while the OpenFDA adverse event data is rich in detail, it requires **careful flattening, cleaning, and feature selection**. Identifying constant fields and handling nested structures were key steps in preparing the dataset for downstream analysis, such as detecting drug-reaction signals or analyzing reporting trends.
