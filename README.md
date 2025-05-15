@@ -21,6 +21,9 @@ The data was successfully **flattened** using `pandas.json_normalize()` and then
 
 During exploration, several columns were found to contain the **same constant value** across all records. These fields provide no useful variance and can be safely removed or deprioritized in downstream analysis.
 
+---
+
+
 The following fields were found to be constant in this file:
 
 - `transmissiondateformat`: `102`
