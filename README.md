@@ -49,14 +49,6 @@ These were individually exploded to convert the data into a normalized, analysis
 
 Exploding was done **column by column** to handle cases where list lengths were inconsistent between fields.
 
----
-
-###  Conclusion
-
-The exploratory data analysis revealed that while the OpenFDA adverse event data is rich in detail, it requires **careful flattening, cleaning, and feature selection**. Identifying constant fields and handling nested structures were key steps in preparing the dataset for downstream analysis, such as detecting drug-reaction signals or analyzing reporting trends.
-
-
-
 
 ## Entity-Relationship Diagram
 
